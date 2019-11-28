@@ -1,6 +1,8 @@
-function redAndBlue() {
+function run() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ballBlue.creatBallBlue();
+    for (let i=0;i<5;i++){
+        bluesBall[i].creatBallBlue();
+    }
     ballRed.creatBallRed();
     ballGreen.creatBallGreen();
     basket.creatTheBasket();
@@ -9,7 +11,7 @@ function redAndBlue() {
 
 function play() {
     canvas.style.backgroundImage = "url('trick2.jpg')";
-    playGame = setInterval(redAndBlue, 30);    
+    playGame = setInterval(run, 30);
 }
 
 function pause() {

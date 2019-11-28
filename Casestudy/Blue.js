@@ -1,4 +1,4 @@
-let BallBlue = function () {
+let BallBlue = function (speed) {
     this.x = Math.floor(Math.random() * canvas.width) - 10;
     this.y = 0;
     this.a = Math.random() * 5;
@@ -14,3 +14,16 @@ let BallBlue = function () {
         }
     }
 };
+function creatBallBlue() {
+    let speed = Math.random()*10+2;
+    let ballBlue = new BallBlue(speed);
+    bluesBall.push(ballBlue);
+    ballBlue.creatBallBlue();
+}
+function creatMultiBallBlue() {
+    for (let i=0;i<5;i++){
+        creatBallBlue();
+    }
+}
+
+

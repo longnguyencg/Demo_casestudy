@@ -15,18 +15,14 @@
     <script src="Basket.js"></script>
     <script src="Score.js"></script>
     <script src="Green.js"></script>
+    <script src="Restart.js"></script>
 </head>
 <body onkeydown="basket.moveBasket(event)">
 <iframe src="halloween.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-<canvas id="myCanvas" width="600" height="660" style="border: 1px solid blue"><h3>Luật chơi:</h3>
-<p>Bạn sẽ điều khiển nhân vật bà Tân để hứng những trái bí ngô</p>
-<br>-Hứng trái blue: tăng 1 điểm
-<br>-Hứng trái yellow: trừ 1 điểm
-<Br>-Hứng trái green: gameover
-<br>-Khi điểm bạn nhỏ hơn 0: gameover
-<br>-Trò chơi kết thúc khi bạn hứng được 100 điểm.</canvas>
+<canvas id="myCanvas" width="600" height="660" style="border: 1px solid blue"></canvas>
 <button onclick="play()">Play</button>
 <button onclick="pause()">Pause</button>
+<button onclick="reStart(event)">Restart</button>
 <span>Điểm hiện tại </span><span id="score"></span>
 <img id="myImg" src="ro.png" style="display: none">
 <img id="blue" src="blue.png" style="display: none">
@@ -39,12 +35,12 @@
     let imageX = document.getElementById('myImg');
     let ctx = canvas.getContext('2d');
     let playGame;
-    let ballBlue = new BallBlue();
     let ballRed = new BallRed();
     let ballGreen = new BallGreen();
     let basket = new Basket(canvas.width, canvas.height);
     let score = 0;
-    let speed = 5;
+    let bluesBall =[];
+    creatMultiBallBlue();
 </script>
 </body>
 </html>
