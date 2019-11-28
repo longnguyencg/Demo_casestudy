@@ -21,5 +21,12 @@ function checkScore() {
         canvas.style.backgroundImage = "url('trick3.jpg')";
 
     }
-    document.getElementById('score').innerHTML = score;
 }
+let Score = function (score) {
+    this.score = score;
+    this.creatScore = function () {
+        ctx.font = "35px Georgia";
+        ctx.fillStyle = "pink";
+        ctx.fillText("Điểm số:"+this.score,20,50);
+    }
+};

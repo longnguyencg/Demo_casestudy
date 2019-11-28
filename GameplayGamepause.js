@@ -7,6 +7,8 @@ function run() {
     ballGreen.creatBallGreen();
     basket.creatTheBasket();
     checkScore();
+    let mark = new Score(score);
+    mark.creatScore();
 }
 
 function play() {
